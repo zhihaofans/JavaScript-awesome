@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         v2ex_signin
 // @namespace    zhihaofans
-// @version      1
+// @version      2
 // @description  V2EX自动签到
 // @author       zhihaofans
 // @match        https://v2ex.com/*
@@ -12,7 +12,7 @@
 // @resource     sweetalertcss https://cdn.bootcss.com/sweetalert/1.1.3/sweetalert.min.css
 // @note         Greasyfork地址:https://greasyfork.org/zh-CN/scripts/28508
 // @note         Github地址:https://github.com/zhihaofans/JavaScript/v2ex/v2ex_signin.js
-// @license      https://choosealicense.com/licenses/apache-2.0/
+// @license      Apache License 2.0
 // ==/UserScript==
 var once_key = null;
 GM_addStyle (GM_getResourceText ("sweetalertcss"));
