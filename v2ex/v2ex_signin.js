@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         v2ex_signin
 // @namespace    zhihaofans
-// @version      2
+// @version      3
 // @description  V2EX自动签到
 // @author       zhihaofans
 // @match        https://v2ex.com/*
@@ -23,12 +23,8 @@ function getOnce() {
         if (b !== undefined) {
             var c = b.indexOf('?once=');
             var d = b.indexOf('\';', c);
-            //console.log('b',b);
-            //console.log('c',c);
-            //console.log('d',d);
             if (c != -1) {
                 once_key_temp = b.substring(c + 6, d);
-                //console.log('once:',once_key_temp);
 
             }
         }
@@ -43,19 +39,14 @@ $(document).ready(function () {
         $.get(signinUrl, function (data) {
             console.log('连接成功');
             if (data.indexOf('<div class=\"message\" onclick=\"$(this).slideUp(\'fast\');\">每日登录奖励已领取</div>') != -1) {
-                //alert('签到成功');
                 newAlert('签到成功', '恭喜你，今天签到成功了哟');
             } else if (data.indexOf('<div class=\"message\" onclick=\"$(this).slideUp(\'fast\');\">今天的登录奖励已经领取过了哦</div>') != -1) {
-                //alert('之前已经签到了');
-                //newAlert('签到失败', '很遗憾，今天已经签到过了哟', 'warning');
                 console.log('很遗憾，今天已经签到过了哟');
             } else {
-                //alert('签到发生未知错误');
                 newAlert('签到失败', '签到发生未知错误', 'error');
             }
         })
             .fail(function () {
-                //alert('发送签到请求失败');
                 newAlert('签到失败', '发送签到请求失败', 'error');
             });
     }
