@@ -11,7 +11,7 @@
 // @match        https://boards.4chan.org/*/*
 // @match        http://boards.4chan.org/*/*
 // @require      https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js
-// @grant        none
+// @grant        Apache-2.0
 // @note         开源地址:https://github.com/zhihaofans/Some-JavaScript/blob/master/imageboard.imagesearch.js
 // @note         Greasyfork地址:https://greasyfork.org/zh-CN/scripts/21115
 // @note         0.3.9: 用coffee-script重写了一遍
