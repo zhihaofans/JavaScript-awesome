@@ -8,9 +8,9 @@
 // @grant        none
 // @icon         https://www.v2ex.com/static/img/icon_rayps_64.png
 // ==/UserScript==
-$(document).ready(function(){
+$(document).ready(function() {
     //搜索改为百度
-    $("#Search form").submit(function(){
+    $("#Search form").submit(function() {
         var q = $("#q");
         if (q.val() !== "") {
             var url = "https://www.baidu.com/s?wd=site:v2ex.com%20" + q.val();
@@ -24,22 +24,22 @@ $(document).ready(function(){
             return false;
         }
     });
-    var nowurl=location.pathname;
+    var nowurl = location.pathname;
     //超链接改为新标签打开
-    if(nowurl=="/" || nowurl.substr(0,6)=="/?tab=" || nowurl.substr(0,4)=="/go/" ){
-        $("span.item_title a").attr("target","_blank");
+    if (nowurl == "/" || nowurl.substr(0, 6) == "/?tab=" || nowurl.substr(0, 4) == "/go/" || nowurl == "/recent") {
+        $("span.item_title a").attr("target", "_blank");
     }
     //楼主标记
-    if(nowurl.substr(0,3)=="/t/"){
-        $("a[rel=nofollow]").attr("target","_blank");
-        $(".inner a").attr("target","_blank");
+    if (nowurl.substr(0, 3) == "/t/") {
+        $("a[rel=nofollow]").attr("target", "_blank");
+        $(".inner a").attr("target", "_blank");
         $(".inner:first a").removeAttr("target");
-        var lzname=$(".header .gray a").text();
-        var replynum=$("div.cell[id^=r_] strong a").length;
-        for(var aa=0;aa<replynum;aa++){
+        var lzname = $(".header .gray a").text();
+        var replynum = $("div.cell[id^=r_] strong a").length;
+        for (var aa = 0; aa < replynum; aa++) {
             // console.log($("div.cell[id^=r_]:eq("+aa+") strong a").text());
-            if($("div.cell[id^=r_]:eq("+aa+") strong a").text()==lzname){
-                $("div.cell[id^=r_]:eq("+aa+") strong").html($("div.cell[id^=r_]:eq("+aa+") strong").html()+"&nbsp;[楼主]");
+            if ($("div.cell[id^=r_]:eq(" + aa + ") strong a").text() == lzname) {
+                $("div.cell[id^=r_]:eq(" + aa + ") strong").html($("div.cell[id^=r_]:eq(" + aa + ") strong").html() + "&nbsp;[楼主]");
             }
         }
     }
