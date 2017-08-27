@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         V2EX.js
 // @namespace    http://zhihaofans.com
-// @version      0.6.0
+// @version      0.6.1
 // @description  V2EX助手
 // @author       zhihaofans
 // @match        https://www.v2ex.com/*
