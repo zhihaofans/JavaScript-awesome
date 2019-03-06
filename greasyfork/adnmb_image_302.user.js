@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         A岛黎明版图片重定向至原图
 // @namespace    zhihaofans
-// @version      0.0.3
+// @version      0.0.4
 // @description  仅适合A岛黎明版、备胎岛
 // @author       zhihaofans
 // @match        https://adnmb.com/t/*
