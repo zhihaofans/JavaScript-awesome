@@ -4,6 +4,8 @@
 // @version      0.0.2
 // @description  Vol.moe打开漫画页面链接时用新标签形式打开
 // @author       zhihaofans
+// @match        http://vol.moe/
+// @match        http://vol.moe/list/*
 // @match        https://vol.moe/
 // @match        https://vol.moe/list/*
 // @require      https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js
