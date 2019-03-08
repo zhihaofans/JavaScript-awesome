@@ -1,11 +1,11 @@
 // ==UserScript==
 // @name         Vol.moe新标签页打开链接
 // @namespace    zhihaofans
-// @version      0.0.1
+// @version      0.0.2
 // @description  Vol.moe打开漫画页面链接时用新标签形式打开
 // @author       zhihaofans
-// @match        http://vol.moe/
-// @match        http://vol.moe/list/*
+// @match        https://vol.moe/
+// @match        https://vol.moe/list/*
 // @require      https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js
 // @grant        Apache-2.0
 // @note         开源地址:https://github.com/zhihaofans/Some-JavaScript/
