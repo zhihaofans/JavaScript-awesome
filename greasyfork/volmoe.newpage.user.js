@@ -10,7 +10,7 @@
 // @match        https://vol.moe/list/*
 // @require      https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js
 // @grant        Apache-2.0
-// @note         开源地址:https://github.com/zhihaofans/Some-JavaScript/
+// @note         开源地址:https://github.com/zhihaofans/JavaScript-awesome/blob/master/greasyfork/volmoe.newpage.user.js
 // @note         Greasyfork地址:https://greasyfork.org/zh-CN/scripts/39773
 // ==/UserScript==
 String.prototype.startWith = function (str) {
