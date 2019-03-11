@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Vol.moe新标签页打开链接
 // @namespace    zhihaofans
-// @version      0.0.2
+// @version      0.0.3
 // @description  Vol.moe打开漫画页面链接时用新标签形式打开
 // @author       zhihaofans
 // @match        http://vol.moe/
@@ -24,10 +24,13 @@ String.prototype.endWith = function (str) {
 (function () {
     jQuery.noConflict();
     jQuery(document).ready(function () {
-        var links = jQuery("a");
+        var links = jQuery("tr.listbg > td > a");
         for (var a = 0; a < links.length; a++) {
             var thisLink = jQuery(links[a]);
-            if (thisLink.attr("href").startWith("/comic/") || (thisLink.attr("href").startWith("http://vol.moe/comic/")) && thisLink.attr("href").endWith(".htm")) {
+            if(thisLink.attr("href").indexOf("http://")>=0){
+                thisLink.attr("href",thisLink.attr("href").replace("http://","https://"));
+            }
+            if (thisLink.attr("href").startWith("https://vol.moe/comic/") && thisLink.attr("href").endWith(".htm")) {
                 thisLink.attr("target", "_black");
             }
         }
