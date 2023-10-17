@@ -1,10 +1,11 @@
 // ==UserScript==
 // @name         V2EX.js
-// @namespace    http://zhihaofans.com
-// @version      0.6.1
+// @namespace    https://github.com/zhihaofans
+// @version      0.6.2
 // @description  V2EX助手
 // @author       zhihaofans
 // @match        https://www.v2ex.com/*
+// @match        https://v2ex.com/*
 // @grant        none
 // @icon         https://www.v2ex.com/static/img/icon_rayps_64.png
 // ==/UserScript==
